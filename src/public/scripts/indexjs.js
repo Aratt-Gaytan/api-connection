@@ -1,9 +1,7 @@
 function busca_dato(){
   document.getElementById('boton').className = "boton"
   document.getElementById('boton').className += " animacion"
-  axios.get("https://uselessfacts.jsph.pl/random.json?language=es", {
-    withCredentials: true
-  }).then((res)=>{
+  axios.get("https://uselessfacts.jsph.pl/random.json?language=es").then((res)=>{
     document.getElementById('dato').innerHTML= '';
     document.getElementById('dato').innerHTML= `
       <span class="subtitulo" id="dato">${res.data.text}</span> 
