@@ -61,7 +61,7 @@ function busca_clima(p){
     .get(url)
     .then((response) => {
       
-
+      console.log(responde.data)
       document.getElementById('info_pais').innerHTML += `
         <div class="card mb-1 "  >
           <div class="row g-0">
