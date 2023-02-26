@@ -56,7 +56,7 @@ function busca_pais(){
 }
 
 function busca_clima(p){
-  url = `https://api.weatherstack.com/current?access_key=1b0df2bad382246e03a04bfb6ead9ec1&query=${p}`;
+  url = `http://api.weatherstack.com/current?access_key=1b0df2bad382246e03a04bfb6ead9ec1&query=${p}`;
   axios
     .get(url)
     .then((response) => {
