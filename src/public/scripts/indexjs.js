@@ -1,7 +1,7 @@
 function busca_dato(){
   document.getElementById('boton').className = "boton"
   document.getElementById('boton').className += " animacion"
-  axios.get("https://api-cnnection.onrender.com/dato", {
+  axios.get("https://uselessfacts.jsph.pl/random.json?language=es", {
     withCredentials: true
   }).then((res)=>{
     document.getElementById('dato').innerHTML= '';
@@ -13,7 +13,7 @@ function busca_dato(){
 
 function busca_pais(){
   var pais = document.getElementById('pais').value;
-  axios.get(`https://api-cnnection.onrender.com/peli/${pais}`).then((res)=>{
+  axios.get(`https://restcountries.com/v3.1/name/${pais}`).then((res)=>{
     console.log(res)
     // http://api.weatherstack.com/current?access_key=1b0df2bad382246e03a04bfb6ead9ec1&query=
     // anim_paises
