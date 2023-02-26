@@ -40,7 +40,7 @@ function busca_pais(){
       <div class="col-12 col-md-6">
         <h2>${res.data[0].name.common}</h2>
         <span class="txt"> Continente: ${res.data[0].continents[0]}</span>
-        <span class="txt"> Latitud: ${res.data[0].latlng[0]} Longitud: ${res.data[0].latlng[1]}</span>
+        <p class="txt"> Latitud: ${res.data[0].latlng[0]} Longitud: ${res.data[0].latlng[1]}</p>
         <p class="txt">Capital: ${res.data[0].capital}</p>
         <p class="txt">Lenguaje: ${len}</p>
       </div>
