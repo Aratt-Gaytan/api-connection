@@ -37,14 +37,14 @@ function busca_pais(){
     // len = len.substr()
     //console.log(len)
     document.getElementById('info_pais').innerHTML=`
-      <div class="col-6 ">
+      <div class="col-6 col-sm-12">
         <h2>${res.data[0].name.common}</h2>
         <span class="txt"> Continente: ${res.data[0].continents[0]}</span>
         <span class="txt"> Latitud: ${res.data[0].latlng[0]} Longitud: ${res.data[0].latlng[1]}</span>
         <p class="txt">Capital: ${res.data[0].capital}</p>
         <p class="txt">Lenguaje: ${len}</p>
       </div>
-      <div class="col-6 p-3">
+      <div class="col-md-6 col-sm-12 p-3">
         <h2>Bandera:</h2>
         <img src="${res.data[0].flags.png}" alt="---">
         
