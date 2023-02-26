@@ -12,7 +12,7 @@ function busca_dato(){
 function busca_pais(){
   var pais = document.getElementById('pais').value;
   axios.get(`https://restcountries.com/v3.1/name/${pais}`).then((res)=>{
-    console.log(res)
+    //console.log(res)
     // http://api.weatherstack.com/current?access_key=1b0df2bad382246e03a04bfb6ead9ec1&query=
     // anim_paises
     var len = JSON.stringify(res.data[0]['languages'])
@@ -35,7 +35,7 @@ function busca_pais(){
     }
     len = len.join(" ")
     // len = len.substr()
-    console.log(len)
+    //console.log(len)
     document.getElementById('info_pais').innerHTML=`
       <div class="col-6 ">
         <h2>${res.data[0].name.common}</h2>
@@ -61,7 +61,7 @@ function busca_clima(p){
     .get(url)
     .then((response) => {
       
-      console.log(response.data)
+      //console.log(response.data)
       document.getElementById('info_pais').innerHTML += `
         <div class="card mb-1 "  >
           <div class="row g-0">
@@ -81,7 +81,7 @@ function busca_clima(p){
         `;
     })
     .catch((err) => {
-      console.log(err);
+      //console.log(err);
     });
 }
 
@@ -92,7 +92,7 @@ function busca_pelicula(){
   var año = document.getElementById('año').value || 2022;
   axios.get(`https://www.omdbapi.com/?t=${npelicula}&y=${año}&apikey=df9de972`)
       .then((res) => {
-        console.log(res.data)
+        //console.log(res.data)
         if(res.data.Response == 'False'){
           document.getElementById('pelicula-contenido').innerHTML=`
           <span class="text-center"><strong>No encontré tu pelicula :(</strong></span>
